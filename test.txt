@@ -1,0 +1,29 @@
+  final box = GetStorage();
+
+  getData() async {
+    userid = myServices.pref.getString("id");
+    statusRequest = StatusRequest.loading;
+    update();
+    var response = await addressData.viewAddress(userid!);
+    statusRequest = handlingData(response);
+    if (statusRequest != StatusRequest.offlinefailure) {
+      if (statusRequest == StatusRequest.success) {
+        if (response['status'] == "success") {
+          List responseData = response['data'];
+          data = responseData.map((e) => AddressDataModel.fromJson(e)).toList();
+          box.write('AddressViewController', response);
+        } else {
+          Get.defaultDialog(middleText: "Please Try Add Address");
+          statusRequest = StatusRequest.failure;
+        }
+      }
+    } else {
+      response = await box.read('AddressViewController');
+      if (response != null) {
+        List responseData = response['data'];
+        data = responseData.map((e) => AddressDataModel.fromJson(e)).toList();
+        statusRequest = StatusRequest.offlineViewData;
+      }
+    }
+    update();
+  }
