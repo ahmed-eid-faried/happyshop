@@ -3,7 +3,7 @@ import 'package:happyshop/core/function/get_des_of_position.dart';
 import 'package:happyshop/core/function/polylinemap/routingmap.dart';
 import 'package:happyshop/core/class/status_request.dart';
 import 'package:happyshop/core/constant/color.dart';
- import 'package:happyshop/core/services/services.dart';
+import 'package:happyshop/core/services/services.dart';
 import 'package:happyshop/data/model/orders.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -68,7 +68,7 @@ class TrackingControllerImp extends TrackingController {
         point: latLng,
         width: 80,
         height: 80,
-        builder: (context) => const Icon(
+        child: Icon(
           Icons.location_on,
           size: 40,
           color: AppColor.primaryColor,
@@ -79,7 +79,7 @@ class TrackingControllerImp extends TrackingController {
         point: deliverypositionStart,
         width: 80,
         height: 80,
-        builder: (context) => const Icon(
+        child: Icon(
           Icons.location_on,
           size: 40,
           color: AppColor.primaryColor,
@@ -137,7 +137,7 @@ class TrackingControllerImp extends TrackingController {
         point: deliveryposition,
         width: 80,
         height: 80,
-        builder: (context) => const Icon(
+        child: Icon(
           Icons.local_taxi,
           size: 50,
           color: Colors.red,

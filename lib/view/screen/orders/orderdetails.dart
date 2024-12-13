@@ -10,7 +10,7 @@ import 'package:happyshop/core/constant/fonts.dart';
 import 'package:happyshop/core/constant/routes.dart';
 
 class OrderDetails extends StatelessWidget {
-  const OrderDetails({Key? key}) : super(key: key);
+  const OrderDetails({super.key});
   @override
   Widget build(BuildContext context) {
     Get.put(OrderDetailsController());

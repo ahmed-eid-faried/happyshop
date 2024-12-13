@@ -6,8 +6,7 @@ class CustomListTitleAbotUs extends StatelessWidget {
   final Function fun;
 
   const CustomListTitleAbotUs(
-      {Key? key, required this.title, required this.fun})
-      : super(key: key);
+      {super.key, required this.title, required this.fun});
 
   @override
   Widget build(BuildContext context) {

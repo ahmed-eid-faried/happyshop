@@ -12,15 +12,14 @@ class CustomTextFieldAuth extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscureText;
   const CustomTextFieldAuth(
-      {Key? key,
+      {super.key,
       required this.label,
       required this.hintText,
       required this.icon,
       this.controller,
       required this.validator,
       this.keyboardType,
-      this.obscureText = false})
-      : super(key: key);
+      this.obscureText = false});
 
   @override
   Widget build(BuildContext context) {

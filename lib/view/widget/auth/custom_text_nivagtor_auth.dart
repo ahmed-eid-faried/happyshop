@@ -7,8 +7,7 @@ class CustomTextNivagtorAuth extends StatelessWidget {
   final Function() ontap;
 
   const CustomTextNivagtorAuth(
-      {Key? key, required this.text1, required this.text2, required this.ontap})
-      : super(key: key);
+      {super.key, required this.text1, required this.text2, required this.ontap});
 
   @override
   Widget build(BuildContext context) {

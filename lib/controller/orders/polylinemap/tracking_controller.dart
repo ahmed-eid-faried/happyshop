@@ -1,15 +1,16 @@
 import 'dart:async';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_map/flutter_map.dart';
+import 'package:geolocator/geolocator.dart';
+import 'package:get/get.dart';
 import 'package:happyshop/controller/orders/polylinemap/drawpolylines.dart';
 import 'package:happyshop/core/class/status_request.dart';
 import 'package:happyshop/core/constant/color.dart';
 import 'package:happyshop/core/function/get_des_of_position.dart';
 import 'package:happyshop/data/model/orders.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_map/flutter_map.dart';
-import 'package:geolocator/geolocator.dart';
-import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class TrackingController extends GetxController {
   late StreamSubscription<Position> positionSubscription;
@@ -38,7 +39,7 @@ class TrackingController extends GetxController {
         point: latLng!,
         width: 80,
         height: 80,
-        builder: (context) => const Icon(
+        child: Icon(
           Icons.location_on,
           size: 40,
           color: AppColor.primaryColor,
@@ -89,7 +90,7 @@ class TrackingController extends GetxController {
         point: position!,
         width: 80,
         height: 80,
-        builder: (context) => const Icon(
+        child: Icon(
           Icons.location_on,
           size: 40,
           color: AppColor.fourthColor,

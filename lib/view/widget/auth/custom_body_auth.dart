@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class CustomBodyAuth extends StatelessWidget {
   final String body;
 
-  const CustomBodyAuth({Key? key, required this.body}) : super(key: key);
+  const CustomBodyAuth({super.key, required this.body});
 
   @override
   Widget build(BuildContext context) {

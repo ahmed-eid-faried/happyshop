@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AddAddressDetails extends StatelessWidget {
-  const AddAddressDetails({Key? key}) : super(key: key);
+  const AddAddressDetails({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 
 class VerfiyCodeForgetPassword extends StatelessWidget {
-  const VerfiyCodeForgetPassword({Key? key}) : super(key: key);
+  const VerfiyCodeForgetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {

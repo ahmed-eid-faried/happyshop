@@ -5,8 +5,7 @@ class CustomButtonAuth extends StatelessWidget {
   final String text;
   final Function() onPressed;
   const CustomButtonAuth(
-      {Key? key, required this.text, required this.onPressed})
-      : super(key: key);
+      {super.key, required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {

@@ -27,7 +27,7 @@ class CustomZoomWidget extends StatelessWidget {
                   controller.increaseZoom();
                 },
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white)),
+                    backgroundColor: WidgetStateProperty.all(Colors.white)),
                 child: const Icon(
                   Icons.add,
                   size: 30,
@@ -38,7 +38,7 @@ class CustomZoomWidget extends StatelessWidget {
                   controller.decreaseZoom();
                 },
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white)),
+                    backgroundColor: WidgetStateProperty.all(Colors.white)),
                 child: const Icon(
                   Icons.remove,
                   size: 30,
@@ -49,7 +49,7 @@ class CustomZoomWidget extends StatelessWidget {
                   Get.bottomSheet(const DetailsOfroutingBottomSheet());
                 },
                 style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white)),
+                    backgroundColor: WidgetStateProperty.all(Colors.white)),
                 child: const Icon(
                   Icons.directions_outlined,
                   size: 30,

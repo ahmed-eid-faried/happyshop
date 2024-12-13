@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ResetPassword extends StatelessWidget {
-  const ResetPassword({Key? key}) : super(key: key);
+  const ResetPassword({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AddressView extends StatelessWidget {
-  const AddressView({Key? key}) : super(key: key);
+  const AddressView({super.key});
 
   @override
   Widget build(BuildContext context) {

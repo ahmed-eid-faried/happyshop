@@ -1,15 +1,15 @@
-import 'package:happyshop/core/class/handling_data_view.dart';
-import 'package:happyshop/core/constant/color.dart';
-import 'package:happyshop/core/constant/routes.dart';
-import 'package:happyshop/controller/orders/tracking_controller.dart';
-import 'package:happyshop/view/widget/orders/tracking/custom_call_and_done_widet.dart';
-import 'package:happyshop/view/widget/orders/tracking/custom_zoom_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:get/get.dart';
+import 'package:happyshop/controller/orders/tracking_controller.dart';
+import 'package:happyshop/core/class/handling_data_view.dart';
+import 'package:happyshop/core/constant/color.dart';
+import 'package:happyshop/core/constant/routes.dart';
+import 'package:happyshop/view/widget/orders/tracking/custom_call_and_done_widet.dart';
+import 'package:happyshop/view/widget/orders/tracking/custom_zoom_widget.dart';
 
 class TrackingOrderDetails extends StatelessWidget {
-  const TrackingOrderDetails({Key? key}) : super(key: key);
+  const TrackingOrderDetails({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +32,14 @@ class TrackingOrderDetails extends StatelessWidget {
                   child: FlutterMap(
                       mapController: controller.mapController,
                       options: MapOptions(
-                          center: controller.deliverypositionStart,
-                          zoom: controller.zoom),
-                      nonRotatedChildren: const [
-                        CustomZoomWidget()
-                      ],
+                          initialCenter: controller.deliverypositionStart,
+                          initialZoom: controller.zoom),
+
+                      // nonRotatedChildren: const [
+                      //   CustomZoomWidget()
+                      // ],
                       children: [
+                        CustomZoomWidget(),
                         TileLayer(
                           urlTemplate:
                               'https://tile.openstreetmap.org/{z}/{x}/{y}.png',

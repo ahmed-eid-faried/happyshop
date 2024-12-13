@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:happyshop/core/binding/bindings.dart';
 import 'package:happyshop/core/constant/apptheme.dart';
 import 'package:happyshop/core/constant/routes.dart';
@@ -5,10 +9,6 @@ import 'package:happyshop/core/localization/locale.dart';
 import 'package:happyshop/core/localization/translation.dart';
 import 'package:happyshop/core/services/services.dart';
 import 'package:happyshop/routes.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
   await initService();
@@ -17,7 +17,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     LocaleController controller = Get.put(LocaleController());

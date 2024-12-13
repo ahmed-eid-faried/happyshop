@@ -1,11 +1,11 @@
-import 'package:happyshop/core/class/status_request.dart';
-import 'package:happyshop/core/constant/color.dart';
-import 'package:happyshop/core/constant/routes.dart';
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
+import 'package:happyshop/core/class/status_request.dart';
+import 'package:happyshop/core/constant/color.dart';
+import 'package:happyshop/core/constant/routes.dart';
 import 'package:happyshop/core/function/get_des_of_position.dart';
 import 'package:latlong2/latlong.dart';
 
@@ -24,11 +24,11 @@ class AddAddressController extends GetxController {
         point: point,
         width: 80,
         height: 80,
-        builder: (context) => const Icon(
-              Icons.location_on,
-              size: 40,
-              color: AppColor.primaryColor,
-            )));
+        child: const Icon(
+          Icons.location_on,
+          size: 40,
+          color: AppColor.primaryColor,
+        )));
     update();
   }
 

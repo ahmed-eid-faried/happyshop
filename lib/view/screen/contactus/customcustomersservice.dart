@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomCustomersService extends StatelessWidget {
-  const CustomCustomersService({Key? key}) : super(key: key);
+  const CustomCustomersService({super.key});
 
   @override
   Widget build(BuildContext context) {

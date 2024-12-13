@@ -1,12 +1,12 @@
-import 'package:happyshop/controller/address/add_address_controller.dart';
-import 'package:happyshop/core/class/handling_data_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+// import 'package:flutter_map/plugin_api.dart';
 import 'package:get/get.dart';
-import 'package:flutter_map/plugin_api.dart';
+import 'package:happyshop/controller/address/add_address_controller.dart';
+import 'package:happyshop/core/class/handling_data_view.dart';
 
 class AddAddress extends StatelessWidget {
-  const AddAddress({Key? key}) : super(key: key);
+  const AddAddress({super.key});
   @override
   Widget build(BuildContext context) {
     Get.put(AddAddressController());
@@ -26,13 +26,13 @@ class AddAddress extends StatelessWidget {
                   child: FlutterMap(
                     mapController: controller.mapController,
                     options: MapOptions(
-                      center: controller.latLng!,
-                      zoom: 14.5,
+                      initialCenter: controller.latLng!,
+                      initialZoom: 14.5,
                       onTap: (tapPosition, point) {
                         controller.addMarker(point);
                       },
                     ),
-                    nonRotatedChildren: const [],
+                    // nonRotatedChildren: const [],
                     children: [
                       TileLayer(
                         urlTemplate:

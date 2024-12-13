@@ -1,9 +1,8 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
+import 'package:get/get.dart';
 import 'package:happyshop/controller/orders/orders_view_controller.dart';
 import 'package:happyshop/core/constant/routes.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
-import 'package:get/get.dart';
-
-import 'package:flutter_ringtone_player/flutter_ringtone_player.dart';
 
 FirebaseMessaging messaging = FirebaseMessaging.instance;
 
@@ -23,7 +22,9 @@ requestPermission() async {
 
 fcmconfig() {
   FirebaseMessaging.onMessage.listen((event) {
-    FlutterRingtonePlayer.playNotification();
+    FlutterRingtonePlayer flutterRingtonePlayer = FlutterRingtonePlayer();
+    flutterRingtonePlayer.playNotification();
+    // FlutterRingtonePlayer.playNotification();
     Get.snackbar(event.notification!.title!, event.notification!.body!);
     refershPageNotifcation(event.data);
     print("notification");
