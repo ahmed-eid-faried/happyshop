@@ -79,7 +79,7 @@ To generate an APK for release, use the following command:
 
 * * *
 
-##🎥 [YouTube Demo](https://www.youtube.com/watch?v=RuvCCDwtgtQ&feature=youtu.be)
+🎥 [YouTube Demo](https://www.youtube.com/watch?v=RuvCCDwtgtQ&feature=youtu.be)
 
 📢 Contact Information
 ----------------------
